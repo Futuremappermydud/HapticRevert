@@ -6,7 +6,7 @@
     "info": {
       "name": "Haptic Revert",
       "id": "haptic-revert",
-      "version": "0.1.0",
+      "version": "0.2.0",
       "url": null,
       "additionalData": {
         "overrideSoName": "libhaptic-revert.so",
@@ -41,9 +41,12 @@
           "pwsh ./scripts/pull-tombstone.ps1"
         ]
       },
-      "qmodIncludeDirs": [],
+      "qmodIncludeDirs": [
+        "./build",
+        "./extern/libs"
+      ],
       "qmodIncludeFiles": [],
-      "qmodOutput": null
+      "qmodOutput": "HapticRevert.qmod"
     },
     "dependencies": [
       {
@@ -58,7 +61,9 @@
       {
         "id": "scotland2",
         "versionRange": "^0.1.4",
-        "additionalData": {}
+        "additionalData": {
+          "includeQmod": false
+        }
       },
       {
         "id": "paper",
